@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
+import VInput from "./components/VInput.vue";
+import { ref } from "vue";
+
+const model = ref("test");
 </script>
 
 <template>
@@ -15,6 +19,9 @@ import HelloWorld from "./components/HelloWorld.vue";
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
+      <h1>Test</h1>
+      <VInput v-model="model" />
+      <p>{{ model }}</p>
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
