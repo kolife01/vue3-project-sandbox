@@ -4,13 +4,12 @@ import { computed } from "vue";
 const props = defineProps({
   modelValue: String,
 })
-const emits = defineEmits(["update:model"]);
+const emits = defineEmits(["update:modelValue"]);
 
-// template側が object になる
-const model = computed(() => ({
+const model = computed({
   get: () => props.modelValue,
-  set: (value) => emits("update:model", value),
-}));
+  set: (value) => emits("update:modelValue", value),
+});
 </script>
 
 <template>

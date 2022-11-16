@@ -4,7 +4,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 import VInput from "./components/VInput.vue";
 import { ref } from "vue";
 
-const model = ref("test");
+const model = ref("pageTitle");
 </script>
 
 <template>
