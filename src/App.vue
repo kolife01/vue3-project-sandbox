@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
 import VInput from "./components/VInput.vue";
+import VLabel from "./components/VLabel.vue";
 import { ref } from "vue";
 
 const model = ref("pageTitle");
@@ -19,10 +20,14 @@ const model = ref("pageTitle");
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-      <h1>Test</h1>
-      <VInput v-model="model" />
-      <p>{{ model }}</p>
-
+      <h1>Test Component</h1>
+      <div>
+        <VInput v-model="model" />
+        <p>{{ model }}</p>
+      </div>
+      <div>
+        <VLabel value="label" type="text" />
+      </div>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>

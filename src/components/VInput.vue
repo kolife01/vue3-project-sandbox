@@ -3,7 +3,7 @@ import { computed } from "vue";
 
 const props = defineProps({
   modelValue: String,
-})
+});
 const emits = defineEmits(["update:modelValue"]);
 
 const model = computed({
