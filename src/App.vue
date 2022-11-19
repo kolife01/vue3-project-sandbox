@@ -3,6 +3,7 @@ import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
 import VInput from "./components/VInput.vue";
 import VLabel from "./components/VLabel.vue";
+import AsyncUserListVue from "./components/AsyncUserList.vue";
 import { ref } from "vue";
 
 const model = ref("pageTitle");
@@ -27,6 +28,11 @@ const model = ref("pageTitle");
       </div>
       <div>
         <VLabel value="label" type="text" />
+      </div>
+      <div>
+        <suspense>
+          <AsyncUserListVue />
+        </suspense>
       </div>
       <nav>
         <RouterLink to="/">Home</RouterLink>
